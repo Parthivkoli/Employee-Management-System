@@ -31,6 +31,10 @@ To get started with the Employee Management System, follow these steps:
    pip install pandas
    ```
 
+   ```
+   pip install tk
+   ```
+
 3. **Run the Application**:
    ```
    cd employee-management-system
@@ -40,6 +44,9 @@ To get started with the Employee Management System, follow these steps:
 4. **Explore and Use**:
    - Add, delete, and view employee data using the provided interface.
    - Import or export data as needed using the respective buttons.
+
+## Screenshots
+![image](https://github.com/Parthivkoli/Employee-Management-System/assets/89799632/bd97b8e1-24d8-4c13-88ac-caddac2062a6)
 
 ## Contributing
 
