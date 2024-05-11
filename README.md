@@ -23,7 +23,7 @@ To get started with the Employee Management System, follow these steps:
 
 1. **Clone the Repository**: 
    ```
-   git clone https://github.com/your-username/employee-management-system.git
+   git clone https://github.com/Parthivkoli/Employee-Management-System
    ```
 
 2. **Install Dependencies**:
