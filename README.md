@@ -1,9 +1,3 @@
-# Employee-Management-System
-
-Certainly! A project introduction page serves as the initial point of contact for users or potential contributors. It provides an overview of the project's purpose, features, technologies used, and how to get started. Here's a template for a project introduction page for the Employee Management System:
-
----
-
 # Employee Management System
 
 ## Introduction
