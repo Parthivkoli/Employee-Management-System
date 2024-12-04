@@ -66,7 +66,13 @@ def main():
         name = st.text_input("Name", placeholder="Enter employee name")
     
     age = st.text_input("Age", placeholder="Enter employee age")
-    role = st.selectbox("Role", ["Manager 👩‍💼", "Developer 👨‍💻", "Designer 🎨"])
+
+    # Dropdown for role selection with custom role option
+    role = st.selectbox("Role", ["Manager 👩‍💼", "Developer 👨‍💻", "Designer 🎨", "Custom Role 📝"])
+
+    # Show input field for custom role if "Custom Role" is selected
+    if role == "Custom Role 📝":
+        role = st.text_input("Enter Custom Role", placeholder="Enter custom role")
 
     # Buttons for actions
     col3, col4 = st.columns(2)
