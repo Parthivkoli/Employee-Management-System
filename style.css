@@ -1,0 +1,242 @@
+/* Define theme variables */
+:root {
+    --bg-color: #F3F4F6; /* Light gray background */
+    --text-color: #1F2937; /* Dark gray text */
+    --header-color: #1E3A8A; /* Deep blue for headers */
+    --button-bg: #3B82F6; /* Vibrant blue for buttons */
+    --button-hover-bg: #F97316; /* Orange for hover */
+    --button-text: #FFFFFF; /* White text on buttons */
+    --sidebar-bg: linear-gradient(135deg, #3B82F6, #1E3A8A); /* Gradient sidebar */
+    --sidebar-text: #FFFFFF; /* White text in sidebar */
+    --input-border: #D1D5DB; /* Light gray border */
+    --card-bg: #FFFFFF; /* White cards */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    --tab-bg: #E5E7EB; /* Light gray for inactive tabs */
+    --tab-active-bg: #3B82F6; /* Blue for active tabs */
+    --tab-active-text: #FFFFFF; /* White text on active tabs */
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #111827; /* Dark gray background */
+        --text-color: #D1D5DB; /* Light gray text */
+        --header-color: #93C5FD; /* Light blue for headers */
+        --button-bg: #60A5FA; /* Lighter blue for buttons */
+        --button-hover-bg: #F97316; /* Orange for hover */
+        --button-text: #FFFFFF; /* White text on buttons */
+        --sidebar-bg: linear-gradient(135deg, #1E3A8A, #111827); /* Darker gradient */
+        --sidebar-text: #D1D5DB; /* Light gray text in sidebar */
+        --input-border: #4B5563; /* Darker gray border */
+        --card-bg: #1F2937; /* Dark gray cards */
+        --shadow-color: rgba(0, 0, 0, 0.3); /* Darker shadow */
+        --tab-bg: #374151; /* Dark gray for inactive tabs */
+        --tab-active-bg: #60A5FA; /* Lighter blue for active tabs */
+        --tab-active-text: #FFFFFF; /* White text on active tabs */
+    }
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: var(--header-color);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+.stButton > button {
+    background: linear-gradient(135deg, var(--button-bg), #2563EB);
+    color: var(--button-text);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.stButton > button:hover {
+    background: var(--button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.stTextInput > div > div > input {
+    border: 2px solid var(--input-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 16px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+.stSelectbox > div > div > select {
+    border: 2px solid var(--input-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 16px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.stSelectbox > div > div > select:focus {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.stDataFrame, .stDataEditor {
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    padding: 16px;
+}
+
+.stTabs > div {
+    border-bottom: 2px solid var(--input-border);
+    margin-bottom: 24px;
+}
+
+.stTabs > div > button {
+    background-color: var(--tab-bg);
+    color: var(--text-color);
+    border-radius: 12px 12px 0 0;
+    padding: 12px 24px;
+    margin-right: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.stTabs > div > button:hover {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.stTabs > div > button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--tab-active-bg);
+    color: var(--tab-active-text);
+    border-bottom: 3px solid var(--button-hover-bg);
+    font-weight: 700;
+}
+
+.stSidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 24px;
+    border-radius: 0 12px 12px 0;
+    min-height: 100vh;
+}
+
+.stSidebar h1, .stSidebar h2, .stSidebar h3 {
+    color: var(--sidebar-text);
+    font-weight: 600;
+}
+
+.stSidebar a {
+    color: #F97316; /* Orange for links */
+    transition: color 0.3s ease;
+}
+
+.stSidebar a:hover {
+    color: #FFFFFF;
+}
+
+.stAlert {
+    border-radius: 12px;
+    font-size: 16px;
+    color: var(--text-color);
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.stForm {
+    background-color: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    margin-bottom: 24px;
+}
+
+.stFileUploader {
+    border: 2px dashed var(--input-border);
+    border-radius: 12px;
+    padding: 16px;
+    background-color: var(--card-bg);
+    text-align: center;
+}
+
+.stFileUploader > div {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Styling for the developer's name */
+.developer-name {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #F97316, #3B82F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Animation for the name glow effect */
+@keyframes glow {
+    0% {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        text-shadow: 1px 1px 6px rgba(59, 130, 246, 0.5);
+    }
+}
+
+/* Styling for profile links */
+.profile-links p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.profile-links a {
+    color: #F97316;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-links a:hover {
+    color: #FFFFFF;
+}
+
+.profile-links .icon {
+    margin-right: 8px;
+}
