@@ -1,6 +1,6 @@
 # Employee Management System 👥
 
-Welcome to the **Employee Management System (EMS)** — a modern, user-friendly web application for managing employee data efficiently. Ideal for HR teams, startups, and small businesses, EMS simplifies everything from hiring to exporting reports. 🚀
+Welcome to the **Employee Management System (EMS)** — a modern, user-friendly web application for managing employee data efficiently. Ideal for HR teams, startups, and small businesses, EMS simplifies everything from hiring to exporting reports.🚀
 
 ---
 
